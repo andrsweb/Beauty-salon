@@ -1,0 +1,35 @@
+.brands {
+	padding: 50px 0;
+	background-color: $black;
+
+	&-items {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 40px;
+	}
+
+	&-item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0 40px;
+		width: calc( 100% / 1 );
+		margin-bottom: 50px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		@media all and (min-width: $sm) {
+			width: calc( 100% / 2 );
+
+			&:nth-child( n + 3 ) {
+				margin-bottom: 0;
+			}
+		}
+
+		@media all and (min-width: $lg) {
+			width: calc( 100% / 4 );
+		}
+	}
+}
