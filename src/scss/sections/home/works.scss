@@ -1,0 +1,106 @@
+.works {
+	padding: 50px 0;
+	background-color: $black;
+
+	h2 {
+		color: $white;
+		margin-bottom: 40px;
+	}
+
+	&-titles {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 80px;
+
+		@media all and (min-width: $md ) {
+			flex-direction: row;
+		}
+
+		h3 {
+			font-family: $ff;
+			font-weight: $fw-regular;
+			font-size: 20px;
+			line-height: 130%;
+			text-align: center;
+			color: $white;
+			margin-bottom: 10px;
+			cursor: pointer;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			@media all and (min-width: $md) {
+				margin-right: 30px;
+				font-size: 24px;
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+
+			&.active {
+				color: $accent;
+			}
+		}
+	}
+}
+
+.works-tab {
+	display: none;
+	animation: fade 0.5s ease forwards;
+
+	@keyframes fade {
+		0% {
+			opacity: 0;
+			scale: 0.9;
+		}
+
+		100% {
+			opacity: 1;
+			scale: 1;
+		}
+	}
+
+	&.active {
+		display: block;
+	}
+
+	&-items {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -20px;
+
+		@media all and (min-width: $lg) {
+			margin: 0 -40px;
+		}
+	}
+
+	&-item {
+		width: calc( 100% / 1 );
+		padding: 0 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 30px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		@media all and (min-width: 576px) {
+			width: calc( 100% / 2 );
+		}
+
+		@media all and (min-width: $lg) {
+			width: calc( 100% / 3 );
+			padding: 0 40px;
+
+			&:nth-child( n + 7 ) {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
