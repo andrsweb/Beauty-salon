@@ -14,9 +14,14 @@
 		width: 2%;
 		margin-right: auto;
 		transition: opacity ease $tr;
+		display: none;
 
 		&:hover {
 			opacity: $op;
+		}
+
+		@media all and (min-width: $lg) {
+			display: flex;
 		}
 	}
 
@@ -29,26 +34,42 @@
 		&:hover {
 			opacity: $op;
 		}
+
+		&.mobile-logo {
+			margin: 0;
+
+			@media all and (min-width: $lg) {
+				display: none;
+			}
+		}
 	}
 
 	&-nav-wrapper {
-		display: flex;
+		display: none;
 		align-items: center;
 		margin-right: auto;
+
+		@media all and (min-width: $lg) {
+			display: flex;
+		}
 	}
 
 	&-nav-left, &-nav-right {
-		display: flex;
+		display: none;
+
+		@media all and (min-width: $lg) {
+			display: flex;
+		}
 	}
 
 	&-nav-link {
 		font-family: $ff;
 		font-style: normal;
 		font-weight: $fw-bold;
-		font-size: 18px;
+		font-size: 16px;
 		line-height: 130%;
 		color: $white;
-		margin-right: 80px;
+		margin-right: 20px;
 
 		&:last-child {
 			margin-right: 0;
@@ -57,10 +78,18 @@
 		&:hover {
 			color: $accent;
 		}
-	}
-}
 
-.burger-menu {
-	display: flex;
-	align-items: center;
+		@media all and (min-width: $xl) {
+			margin-right: 80px;
+			font-size: 18px;
+		}
+
+		&.mobile-nav-link {
+			margin-right: 0;
+
+			@media all and (min-width: $lg) {
+				display: none;
+			}
+		}
+	}
 }
