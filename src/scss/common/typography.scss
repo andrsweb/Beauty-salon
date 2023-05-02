@@ -1,20 +1,27 @@
 h1, .h1,
 h2, .h2,
 h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
-	font-family: $ff-title;
+h4, .h4 {
+	font-family: $ff;
 	font-weight: $fw-bold;
 	line-height: $lh-title;
-	margin: 0 0 1rem
+	text-align: center;
+	margin: 0;
+
+	&::selection {
+		background-color: $white;
+		color: $accent;
+	}
 }
 
 h1, .h1 {
 	font-size: 32px;
+	line-height: 120%;
+	text-align: center;
+	color: #FFFFFF;
 
 	@media all and (min-width: $lg) {
-		font-size: 36px
+		font-size: 72px
 	}
 }
 
@@ -38,29 +45,34 @@ h4, .h4 {
 	}
 }
 
-h5, .h5 {
-	font-size: $fs-xl
-}
-
-h6, .h6 {
-	font-size: $fs-lg
-}
-
 a {
 	display: inline-block;
-	text-decoration: underline;
+	text-decoration: none;
 	transition: color ease-out $tr;
 
 	&:hover {
-		text-decoration: none
+		color: $accent;
+	}
+
+	&::selection {
+		background-color: $white;
+		color: $accent;
 	}
 }
 
 p {
-	margin-top: 0;
+	margin: 0;
 
-	&:last-of-type {
-		margin-bottom: 0
+	&::selection {
+		background-color: $white;
+		color: $accent;
+	}
+}
+
+div {
+	&::selection {
+		background-color: $white;
+		color: $accent;
 	}
 }
 

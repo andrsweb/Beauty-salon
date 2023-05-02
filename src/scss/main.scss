@@ -4,12 +4,24 @@
 @import 'common/typography';
 @import 'common/grid';
 @import 'common/base';
+@import 'common/ui';
 
 // Header styles.
 @import 'header/header';
+@import 'header/burger-menu';
 
 // Footer styles.
 @import 'footer/footer';
 
 // Home page sections styles.
 @import 'sections/home/hero';
+@import 'sections/home/desc';
+@import 'sections/home/services';
+@import 'sections/home/brands';
+@import 'sections/home/works';
+
+// Price page sections styles.
+@import 'sections/price/price';
+
+// Contacts page sections styles.
+@import 'sections/contacts/contacts'
