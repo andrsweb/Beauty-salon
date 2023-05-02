@@ -1,0 +1,28 @@
+.contacts {
+	padding: 150px 0 50px 0;
+	background-color: $black;
+
+	.map {
+		width: 100vw;
+		height: 100vw;
+		filter: grayscale( 100% );
+		border: 0;
+		border-style: none;
+
+		@media all and (min-width: $sm) {
+			height: 60vw;
+		}
+
+		@media all and (min-width: $md) {
+			height: 45vw;
+		}
+
+		@media all and (min-width: $lg) {
+			height: 30vw;
+		}
+	}
+
+	h1 {
+		margin-bottom: 50px;
+	}
+}
