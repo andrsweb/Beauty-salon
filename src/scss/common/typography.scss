@@ -6,6 +6,11 @@ h4, .h4 {
 	font-weight: $fw-bold;
 	line-height: $lh-title;
 	margin: 0;
+
+	&::selection {
+		background-color: $white;
+		color: $accent;
+	}
 }
 
 h1, .h1 {
@@ -47,10 +52,27 @@ a {
 	&:hover {
 		color: $accent;
 	}
+
+	&::selection {
+		background-color: $white;
+		color: $accent;
+	}
 }
 
 p {
 	margin: 0;
+
+	&::selection {
+		background-color: $white;
+		color: $accent;
+	}
+}
+
+div {
+	&::selection {
+		background-color: $white;
+		color: $accent;
+	}
 }
 
 b, strong {
