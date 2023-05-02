@@ -16,10 +16,10 @@
 	<meta name="theme-color" content="#ffffff">
 	<!--  -->
 
-	<title>Наши мастера</title>
+	<title>Цены на услуги</title>
 	<link rel="stylesheet" href="css/main.min.css" />
 </head>
-<body class="masters-page">
+<body class="price-page">
 	<div class="wrapper">
 		<header class="header">
 			<div class="container">
@@ -35,9 +35,9 @@
 							<a class="header-nav-link" href="/">
 								Главная
 							</a>
-							<div class="header-nav-link">
+							<a href="masters.html" class="header-nav-link">
 								Мастера
-							</div>
+							</ф>
 							<a class="header-nav-link" href="index.html#works">
 								Работы
 							</a>
@@ -49,10 +49,10 @@
 							<a class="header-nav-link anchor" href="#sale">
 								Акции
 							</a>
-							<a class="header-nav-link anchor" href="price.html">
+							<div class="header-nav-link anchor">
 								Прайс
-							</a>
-							<a class="header-nav-link" href="contacts.html">
+							</div>
+							<a class="header-nav-link anchor" href="contacts.html">
 								Контакты
 							</a>
 						</nav>
@@ -108,7 +108,7 @@
 		</header>
 
 <main>
-	@@include( 'template-parts/sections/masters/our-masters.html' )
+	@@include( 'template-parts/sections/price/price.html', { 'class': 'reverse' } )
 </main>
 
 @@include( 'template-parts/footer/footer.html' )

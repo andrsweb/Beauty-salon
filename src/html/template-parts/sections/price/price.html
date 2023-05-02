@@ -1,0 +1,14 @@
+<section class="price">
+	<div class="container">
+		<h1>
+			Цены на услуги
+		</h1>
+		<div class="price-items">
+			@@loop( './price-item.html', [
+				{ 'class': '' },
+				{ 'class': 'reverse' },
+				{ 'class': '' }
+			] )
+		</div>
+	</div>
+</section>
