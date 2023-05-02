@@ -5,6 +5,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	'use strict'
 
 	toggleBurgerMenu()
+	headerScroll()
 } )
 
 // Click on burger-menu button
@@ -55,4 +56,20 @@ const toggleBurgerMenu = () => {
             enableBodyScroll( getTargetElement() )
         }
 	} )
+}
+
+const headerScroll = () => {
+	window.addEventListener('scroll', () => {
+		const scrollTop = window.scrollY
+		const header = document.querySelector( '.header' )
+
+		if( ! header ) return
+
+		if ( scrollTop > 0 ) {
+			if ( ! header.classList.contains( 'scrolled' ) )
+				header.classList.add( 'scrolled' )
+		}   else {
+			header.classList.remove( 'scrolled' )
+		}
+	})
 }
