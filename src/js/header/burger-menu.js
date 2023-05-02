@@ -19,7 +19,7 @@ const toggleBurgerMenu = () => {
 		if( ! button.classList.contains( 'opened' ) ) {
 			button.classList.add( 'opened' )
 			burgerMenuWrapper.classList.add( 'opened' )
-			disableBodyScroll( getTargetElement() )
+			disableBodyScroll( getTargetElement(), { reserveScrollBarGap: true } )
 		} 
 		else {
 			button.classList.remove( 'opened' )
