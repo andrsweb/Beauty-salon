@@ -10,9 +10,12 @@ h4, .h4 {
 
 h1, .h1 {
 	font-size: 32px;
+	line-height: 120%;
+	text-align: center;
+	color: #FFFFFF;
 
 	@media all and (min-width: $lg) {
-		font-size: 36px
+		font-size: 72px
 	}
 }
 
