@@ -1,0 +1,59 @@
+.footer {
+	padding: 30px 0;
+	background-color: $black;
+	position: relative;
+
+	&::after {
+		content: "";
+		display: block;
+		width: 60%;
+		height: 1px;
+		position: absolute;
+		bottom: 10px;
+		left: 50%;
+		transform: translateX( -50% );
+		z-index: 10;
+		background-color: $white;
+	}
+
+	&-wrapper {
+		display: flex;
+	}
+
+	&-logo {
+		margin-right: 50px;
+		transition: opacity ease $tr;
+
+		&:hover {
+			opacity: $op;
+		}
+	}
+
+	&-title {
+		font-family: $ff;
+		font-weight: $fw-regular;
+		font-size: 25px;
+		line-height: 130%;
+		color: $white;
+		margin-bottom: 15px;
+	}
+
+	&-cols {
+		width: calc( 100% - 60px );
+		display: flex;
+	}
+
+	&-col {
+		display: flex;
+		flex-direction: column;
+		width: 33.333%;
+	}
+
+	&-row {
+		font-family: $ff;
+		font-weight: $fw-regular;
+		font-size: 18px;
+		line-height: 130%;
+		color: $white;
+	}
+}
